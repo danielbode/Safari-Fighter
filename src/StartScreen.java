@@ -1,15 +1,15 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Startbildschirm here.
+ * Write a description of class StartScreen here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Startbildschirm extends Actor
+public class StartScreen extends Actor
 {
     /**
-     * Act - do whatever the Startbildschirm wants to do. This method is called whenever
+     * Act - do whatever the StartScreen wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

@@ -51,7 +51,7 @@ public class Labyrinth extends Actor
     }
     
     
-    public int WertGeben(int x, int y) 
+    public int setValue(int x, int y) 
     {
         return f[x][y];
     }    

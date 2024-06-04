@@ -8,25 +8,25 @@ import greenfoot.*;
  */
 public class Sound
 {   
-    private greenfoot.GreenfootSound Musik;
+    private greenfoot.GreenfootSound music;
     
     public Sound(String Soundname)
     {    
-       Musik = new greenfoot.GreenfootSound(Soundname);
+       music = new greenfoot.GreenfootSound(Soundname);
     }
     
     public void spielenLoop()
     {
-        Musik.playLoop();
+        music.playLoop();
     }
     
     public void spielen()
     {
-        Musik.play();
+        music.play();
     }
     
     public void stoppen() 
     {
-        Musik.stop();
+        music.stop();
     }
 }

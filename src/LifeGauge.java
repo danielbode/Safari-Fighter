@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lebensanzeige extends Actor
+public class LifeGauge extends Actor
 {
     /**
      * Act - do whatever the Lebensanzeige wants to do. This method is called whenever

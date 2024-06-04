@@ -17,17 +17,17 @@ public class Monster extends Actor
     public void act() 
     {
         move(4);
-        Kollidieren();        
+        collide();        
     }    
     
-    public void Kollidieren()
+    public void collide()
     {
-        int Richtung = getRotation();
-        switch(Richtung)
+        int direction = getRotation();
+        switch(direction)
         {
             case 0:  try
                      {
-                        if(super.getOneObjectAtOffset(35,0,Hindernis.class).getX()>super.getX())
+                        if(super.getOneObjectAtOffset(35,0,Obstacle.class).getX()>super.getX())
                         {
                             RTurn();
                         }
@@ -39,7 +39,7 @@ public class Monster extends Actor
                      break;
             case 90: try
                      {
-                        if(super.getOneObjectAtOffset(0,35,Hindernis.class).getY()>super.getY())
+                        if(super.getOneObjectAtOffset(0,35,Obstacle.class).getY()>super.getY())
                         {
                             RTurn();
                         }
@@ -51,7 +51,7 @@ public class Monster extends Actor
                      break;
             case 180:try
                     {
-                        if(super.getOneObjectAtOffset(-35,0,Hindernis.class).getX()<super.getX())
+                        if(super.getOneObjectAtOffset(-35,0,Obstacle.class).getX()<super.getX())
                         {
                             RTurn();
                         }
@@ -63,7 +63,7 @@ public class Monster extends Actor
                     break;
             case 270:try
                     {
-                        if(super.getOneObjectAtOffset(0, -35, Hindernis.class).getY()<super.getY())
+                        if(super.getOneObjectAtOffset(0, -35, Obstacle.class).getY()<super.getY())
                         {
                             RTurn();
                         }
