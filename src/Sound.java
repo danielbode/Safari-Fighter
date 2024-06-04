@@ -1,32 +1,26 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Sound here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Daniel Bode
+ * @version 2024.06.04
  */
-public class Sound
-{   
+public class Sound {   
     private greenfoot.GreenfootSound music;
     
-    public Sound(String Soundname)
-    {    
-       music = new greenfoot.GreenfootSound(Soundname);
+    public Sound(String soundname) {    
+       music = new greenfoot.GreenfootSound(soundname);
     }
     
-    public void spielenLoop()
-    {
+    public void playLoop() {
         music.playLoop();
     }
     
-    public void spielen()
-    {
+    public void play() {
         music.play();
     }
     
-    public void stoppen() 
-    {
+    public void stop() {
         music.stop();
     }
 }

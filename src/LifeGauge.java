@@ -1,19 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Lebensanzeige here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Daniel Bode
+ * @version 2024.06.04
  */
-public class LifeGauge extends Actor
-{
-    /**
-     * Act - do whatever the Lebensanzeige wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        
-    }    
+public class LifeGauge extends Actor {
+    public void act() { }
 }

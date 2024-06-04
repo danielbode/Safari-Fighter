@@ -1,58 +1,190 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Labyrinth here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Daniel Bode
+ * @version 2024.06.04
  */
-public class Labyrinth extends Actor
-{
-    public int[][] f;
+public class Labyrinth extends Actor {
+    public int[][] labyrinthGrid;
     
-    /**
-     * Act - do whatever the Labyrinth wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public Labyrinth()
-    {
-        f=new int[25][17];
-        for(int i=0;i<24;i++)
-        {f[i][0]=1;}
-        for(int i=1;i<17;i++)
-        {f[0][i]=1;}
-        for(int i=1;i<17;i++)
-        {f[23][i]=1;}
-        for(int i=1;i<24;i++)
-        {f[i][16]=1;}
-        f[1][1]=1;  f[5][2]=1;  f[2][3]=1;  f[2][4]=1;  f[6][5]=1;  f[1][6]=1;  f[1][7]=1;  f[1][8]=1;
-        f[2][1]=1;  f[6][2]=1;  f[3][3]=1;  f[3][4]=1;  f[12][5]=1; f[2][6]=1;  f[7][7]=1;  f[3][8]=1;
-        f[3][1]=1;  f[7][2]=1;  f[6][3]=1;  f[4][4]=1;  f[13][5]=1; f[4][6]=1;  f[8][7]=1;  f[4][8]=1;
-        f[12][1]=1; f[8][2]=1;  f[7][3]=1;  f[8][4]=1;  f[14][5]=1; f[5][6]=1;  f[9][7]=1;  f[5][8]=1;
-        f[13][1]=1; f[10][2]=1; f[8][3]=1;  f[10][4]=1; f[22][5]=1; f[6][6]=1;  f[10][7]=1; f[7][8]=1;
-        f[14][1]=1; f[12][2]=1; f[15][3]=1; f[12][4]=1; f[7][6]=1;  f[18][6]=1; f[12][7]=1; f[8][8]=1;
-        f[18][1]=1; f[13][2]=1; f[16][3]=1; f[13][4]=1; f[8][6]=1;  f[19][6]=1; f[16][7]=1; f[9][8]=1;
-        f[19][1]=1; f[16][2]=1; f[20][3]=1; f[16][4]=1; f[9][6]=1;  f[20][6]=1; f[21][7]=1; f[10][8]=1;
-        f[20][1]=1; f[18][2]=1; f[22][3]=1; f[17][4]=1; f[10][6]=1; f[21][6]=1; f[22][7]=1; f[12][8]=1;
-        f[21][1]=1; f[22][2]=1; f[19][4]=1; f[22][4]=1; f[14][6]=1; f[22][6]=1; f[13][8]=1; f[18][8]=1;
-        f[22][1]=1; f[18][4]=1; f[20][4]=1; f[16][6]=1; f[17][6]=1; f[14][8]=1; f[16][8]=1; f[19][8]=1;
+    public Labyrinth() {
+        labyrinthGrid = new int[25][17];
         
-        f[21][8]=1;  f[12][10]=1; f[3][11]=1;  f[2][12]=1;  f[22][12]=1; f[5][14]=1;  f[18][14]=1;
-        f[22][8]=1;  f[13][10]=1; f[5][11]=1;  f[3][12]=1;  f[2][13]=1;  f[6][14]=1;  f[19][14]=1;
-        f[1][9]=1;   f[14][10]=1; f[9][11]=1;  f[5][12]=1;  f[3][13]=1;  f[8][14]=1;  f[22][14]=1;
-        f[1][10]=1;  f[15][10]=1; f[10][11]=1; f[7][12]=1;  f[5][13]=1;  f[9][14]=1;  f[1][15]=1;
-        f[3][10]=1;  f[16][10]=1; f[12][11]=1; f[9][12]=1;  f[9][13]=1;  f[10][14]=1; f[2][15]=1;
-        f[5][10]=1;  f[17][10]=1; f[13][11]=1; f[10][12]=1; f[10][13]=1; f[12][14]=1; f[3][15]=1;
-        f[6][10]=1;  f[18][10]=1; f[14][11]=1; f[12][12]=1; f[19][13]=1; f[13][14]=1; f[4][15]=1;
-        f[8][10]=1;  f[19][10]=1; f[19][11]=1; f[13][12]=1; f[20][13]=1; f[14][14]=1; f[5][15]=1;
-        f[9][10]=1;  f[20][10]=1; f[20][11]=1; f[14][12]=1; f[22][13]=1; f[15][14]=1; f[6][15]=1;
-        f[10][10]=1; f[21][10]=1; f[16][12]=1; f[17][12]=1; f[16][14]=1; f[17][14]=1; f[21][15]=1;
-        f[22][15]=1;
+        for (int i=0;i<24;i++) {
+            labyrinthGrid[i][0]=1;
+        }
+        for (int i=1;i<17;i++) {
+            labyrinthGrid[0][i]=1;
+        }
+        for (int i=1;i<17;i++) {
+            labyrinthGrid[23][i]=1;
+        }
+        for (int i=1;i<24;i++) {
+            labyrinthGrid[i][16]=1;
+        }
+        labyrinthGrid[1][1]=1;
+        labyrinthGrid[5][2]=1;
+        labyrinthGrid[2][3]=1;
+        labyrinthGrid[2][4]=1;
+        labyrinthGrid[6][5]=1;
+        labyrinthGrid[1][6]=1;
+        labyrinthGrid[1][7]=1;
+        labyrinthGrid[1][8]=1;
+        labyrinthGrid[2][1]=1;
+        labyrinthGrid[6][2]=1;
+        labyrinthGrid[3][3]=1;
+        labyrinthGrid[3][4]=1;
+        labyrinthGrid[12][5]=1;
+        labyrinthGrid[2][6]=1;
+        labyrinthGrid[7][7]=1;
+        labyrinthGrid[3][8]=1;
+        labyrinthGrid[3][1]=1;
+        labyrinthGrid[7][2]=1;
+        labyrinthGrid[6][3]=1;
+        labyrinthGrid[4][4]=1;
+        labyrinthGrid[13][5]=1;
+        labyrinthGrid[4][6]=1;
+        labyrinthGrid[8][7]=1;
+        labyrinthGrid[4][8]=1;
+        labyrinthGrid[12][1]=1;
+        labyrinthGrid[8][2]=1;
+        labyrinthGrid[7][3]=1;
+        labyrinthGrid[8][4]=1;
+        labyrinthGrid[14][5]=1;
+        labyrinthGrid[5][6]=1;
+        labyrinthGrid[9][7]=1;
+        labyrinthGrid[5][8]=1;
+        labyrinthGrid[13][1]=1;
+        labyrinthGrid[10][2]=1;
+        labyrinthGrid[8][3]=1;
+        labyrinthGrid[10][4]=1;
+        labyrinthGrid[22][5]=1;
+        labyrinthGrid[6][6]=1;
+        labyrinthGrid[10][7]=1;
+        labyrinthGrid[7][8]=1;
+        labyrinthGrid[14][1]=1;
+        labyrinthGrid[12][2]=1;
+        labyrinthGrid[15][3]=1;
+        labyrinthGrid[12][4]=1;
+        labyrinthGrid[7][6]=1;
+        labyrinthGrid[18][6]=1;
+        labyrinthGrid[12][7]=1;
+        labyrinthGrid[8][8]=1;
+        labyrinthGrid[18][1]=1;
+        labyrinthGrid[13][2]=1;
+        labyrinthGrid[16][3]=1;
+        labyrinthGrid[13][4]=1;
+        labyrinthGrid[8][6]=1;
+        labyrinthGrid[19][6]=1;
+        labyrinthGrid[16][7]=1;
+        labyrinthGrid[9][8]=1;
+        labyrinthGrid[19][1]=1;
+        labyrinthGrid[16][2]=1;
+        labyrinthGrid[20][3]=1;
+        labyrinthGrid[16][4]=1;
+        labyrinthGrid[9][6]=1;
+        labyrinthGrid[20][6]=1;
+        labyrinthGrid[21][7]=1;
+        labyrinthGrid[10][8]=1;
+        labyrinthGrid[20][1]=1;
+        labyrinthGrid[18][2]=1;
+        labyrinthGrid[22][3]=1;
+        labyrinthGrid[17][4]=1;
+        labyrinthGrid[10][6]=1;
+        labyrinthGrid[21][6]=1;
+        labyrinthGrid[22][7]=1;
+        labyrinthGrid[12][8]=1;
+        labyrinthGrid[21][1]=1;
+        labyrinthGrid[22][2]=1;
+        labyrinthGrid[19][4]=1;
+        labyrinthGrid[22][4]=1;
+        labyrinthGrid[14][6]=1;
+        labyrinthGrid[22][6]=1;
+        labyrinthGrid[13][8]=1;
+        labyrinthGrid[18][8]=1;
+        labyrinthGrid[22][1]=1;
+        labyrinthGrid[18][4]=1;
+        labyrinthGrid[20][4]=1;
+        labyrinthGrid[16][6]=1;
+        labyrinthGrid[17][6]=1;
+        labyrinthGrid[14][8]=1;
+        labyrinthGrid[16][8]=1;
+        labyrinthGrid[19][8]=1;
+        labyrinthGrid[21][8]=1;
+        labyrinthGrid[12][10]=1;
+        labyrinthGrid[3][11]=1;
+        labyrinthGrid[2][12]=1;
+        labyrinthGrid[22][12]=1;
+        labyrinthGrid[5][14]=1;
+        labyrinthGrid[18][14]=1;
+        labyrinthGrid[22][8]=1;
+        labyrinthGrid[13][10]=1;
+        labyrinthGrid[5][11]=1;
+        labyrinthGrid[3][12]=1;
+        labyrinthGrid[2][13]=1;
+        labyrinthGrid[6][14]=1;
+        labyrinthGrid[19][14]=1;
+        labyrinthGrid[1][9]=1;
+        labyrinthGrid[14][10]=1;
+        labyrinthGrid[9][11]=1;
+        labyrinthGrid[5][12]=1;
+        labyrinthGrid[3][13]=1;
+        labyrinthGrid[8][14]=1;
+        labyrinthGrid[22][14]=1;
+        labyrinthGrid[1][10]=1;
+        labyrinthGrid[15][10]=1;
+        labyrinthGrid[10][11]=1;
+        labyrinthGrid[7][12]=1;
+        labyrinthGrid[5][13]=1;
+        labyrinthGrid[9][14]=1;
+        labyrinthGrid[1][15]=1;
+        labyrinthGrid[3][10]=1;
+        labyrinthGrid[16][10]=1;
+        labyrinthGrid[12][11]=1;
+        labyrinthGrid[9][12]=1;
+        labyrinthGrid[9][13]=1;
+        labyrinthGrid[10][14]=1;
+        labyrinthGrid[2][15]=1;
+        labyrinthGrid[5][10]=1;
+        labyrinthGrid[17][10]=1;
+        labyrinthGrid[13][11]=1;
+        labyrinthGrid[10][12]=1;
+        labyrinthGrid[10][13]=1;
+        labyrinthGrid[12][14]=1;
+        labyrinthGrid[3][15]=1;
+        labyrinthGrid[6][10]=1;
+        labyrinthGrid[18][10]=1;
+        labyrinthGrid[14][11]=1;
+        labyrinthGrid[12][12]=1;
+        labyrinthGrid[19][13]=1;
+        labyrinthGrid[13][14]=1;
+        labyrinthGrid[4][15]=1;
+        labyrinthGrid[8][10]=1;
+        labyrinthGrid[19][10]=1;
+        labyrinthGrid[19][11]=1;
+        labyrinthGrid[13][12]=1;
+        labyrinthGrid[20][13]=1;
+        labyrinthGrid[14][14]=1;
+        labyrinthGrid[5][15]=1;
+        labyrinthGrid[9][10]=1;
+        labyrinthGrid[20][10]=1;
+        labyrinthGrid[20][11]=1;
+        labyrinthGrid[14][12]=1;
+        labyrinthGrid[22][13]=1;
+        labyrinthGrid[15][14]=1;
+        labyrinthGrid[6][15]=1;
+        labyrinthGrid[10][10]=1;
+        labyrinthGrid[21][10]=1;
+        labyrinthGrid[16][12]=1;
+        labyrinthGrid[17][12]=1;
+        labyrinthGrid[16][14]=1;
+        labyrinthGrid[17][14]=1;
+        labyrinthGrid[21][15]=1;
+        labyrinthGrid[22][15]=1;
     }
     
-    
-    public int setValue(int x, int y) 
-    {
-        return f[x][y];
+    public int getValue(int x, int y) {
+        return labyrinthGrid[x][y];
     }    
 }
