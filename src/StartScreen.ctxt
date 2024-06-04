@@ -2,7 +2,7 @@
 comment0.target=StartScreen
 comment0.text=\r\n\ \r\n\ @author\ Daniel\ Bode\r\n\ @version\ 2024.06.04\r\n
 comment1.params=
-comment1.target=void\ act()
-comment2.params=x\ y
-comment2.target=void\ scale(int,\ int)
+comment1.target=StartScreen()
+comment2.params=
+comment2.target=void\ act()
 numComments=3

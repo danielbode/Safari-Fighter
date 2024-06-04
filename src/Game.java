@@ -49,10 +49,6 @@ public class Game extends World {
         addObject(l3, 200, 830);
         
         music = new Sound("Beat.wav");
-        
-        //startScreen = new StartScreen();
-        //super.addObject(startScreen,711,440);
-        //startScreen.scale(1422,880);
     }
     
     public void act() {

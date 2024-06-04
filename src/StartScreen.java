@@ -5,12 +5,16 @@ import greenfoot.*;
  * @author Daniel Bode
  * @version 2024.06.04
  */
-public class StartScreen extends Actor {
-    public void act() { }
+public class StartScreen extends World {
+    private int counter;
     
-    public void scale(int x, int y) {
-        GreenfootImage start = new GreenfootImage("01_startscreen.png");
-        start.scale(x, y);
-        start.drawImage(start, x, y);
+    public StartScreen() {
+        super(1422, 880, 1);        
+    }
+    
+    public void act() {
+        if (Greenfoot.getKey() != null) {
+            Greenfoot.setWorld(new Game());
+        }
     }
 }
