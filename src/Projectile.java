@@ -18,7 +18,7 @@ public class Projectile extends Actor {
        super.move(10);
        if (isTouching(Monster.class)) {
            Game.score++;
-           music = new Sound("Treffersound.wav");
+           music = new Sound("hit.wav");
            music.play();
        }
            

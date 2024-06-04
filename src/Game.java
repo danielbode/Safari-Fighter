@@ -48,7 +48,7 @@ public class Game extends World {
         l3 = new LifeGauge();
         addObject(l3, 200, 830);
         
-        music = new Sound("Beat.wav");
+        music = new Sound("background.wav");
     }
     
     public void act() {

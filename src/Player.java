@@ -35,7 +35,7 @@ public class Player extends Actor {
                 projectile = new Projectile();
                 w.addObject(projectile, super.getX(), super.getY());
                 projectile.setRotation(this.getRotation());
-                music = new Sound("Schusssound.wav");
+                music = new Sound("shoot.wav");
                 music.play();
                 lastAdded = curTime;
             }
