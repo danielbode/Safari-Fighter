@@ -5,9 +5,9 @@ Safari Fighter is a 2D high-score survival game. You are trapped in a jungle lab
 
 Originally created in 2015 and revised in 2024.
 
-![ScreensotStartScreen](images/screenshotStart.png)
+![ScreenshotStartScreen](images/screenshotStart.png)
 
-![ScreensotStartScreen](images/screenshotGame.png)
+![ScreenshotGame](images/screenshotGame.png)
 
 ### Built With
 
@@ -23,7 +23,7 @@ This project uses Java 8.
 ### Use .jar with Local Java 8 Installation
 If you already have a Java runtime environment for Java 8 installed on your computer, you can simply download the executable .jar file and run it directly.
 
-Otherwise you can install a Java 8 runtime environment from any vendor that also includes JavaFX (e.g. Orcacle: https://www.oracle.com/de/java/technologies/javase/javase8-archive-downloads.html or Amazon: https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and then run it.
+Otherwise you can install a Java 8 runtime environment from any vendor that also includes JavaFX (e.g. Oracle: https://www.oracle.com/de/java/technologies/javase/javase8-archive-downloads.html or Amazon: https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html) and then run it.
 
 If you are using Windows, you can alternatively use the bundled standalone version. It includes a Java 8 JRE, so you don't need to install anything yourself.
 
@@ -63,7 +63,7 @@ If you want to create a Windows standalone version, you have to export the proje
 ## License
 Distributed under the GPL-3.0 license. See <code>LICENSE</code> for more information.
 
-## Acknoledgments
+## Acknowledgments
 I'd like to give special thanks to the Greenfoot project, which helps students develop their first Java application in an easy and intuitive way.
 
 - [Greenfoot](https://www.greenfoot.org/door)
